@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fleur+De+Leah&display=swap');
 
+body {
+    background-color: #F29AA0;
+}
 
-.flex{
-    display: flex;
+.flex {
+    display        : flex;
     justify-content: center;
+}
+
+section {
+    border: 2px solid palevioletred;
+    height: 600px;
+    margin: 0 400px;
 }
 
 h1 {

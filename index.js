@@ -1,3 +1,5 @@
-function onTaskSubmit(){
-    console.log("salut")
+function onTaskSubmit(str) {
+    console.log(str)
 }
+
+onTaskSubmit("bonjour")
