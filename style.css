@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fleur+De+Leah&display=swap');
+
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Fleur De Leah', cursive;
+
+}
