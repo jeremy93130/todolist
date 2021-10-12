@@ -1,23 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fleur+De+Leah&display=swap');
 
+
+/* taille des nuages */
+
 header img {
     height: 100px;
     margin: 0 30px;
 }
 
+/* nuage souriant*/
+
 #smily {
     position: relative;
-    bottom: 10px;
+    bottom  : 10px;
 }
+
+/* nuage qui dort*/
 
 #sleep {
     position: relative;
-    top: 50px;
+    top     : 50px;
 }
 
 body {
     background-color: #F29AA0;
 }
+
+/* class flex pour éviter de s'embêter */
 
 .flex {
     display        : flex;
@@ -25,31 +34,62 @@ body {
 }
 
 section {
-    border: 2px solid palevioletred;
-    width: 1500px;
-    height: 750px;
+    border          : 2px solid palevioletred;
+    width           : 1500px;
+    height          : 750px;
     background-color: #FEF6F4;
 }
 
+/* h1 forcément ... */
+
 h1 {
-    font-family: 'Fleur De Leah', cursive;
-    font-weight: bold;
-    font-size: 50px;
-    word-spacing: 10px;
+    font-family   : 'Fleur De Leah', cursive;
+    font-weight   : bold;
+    font-size     : 50px;
+    word-spacing  : 10px;
     letter-spacing: 5px;
 
 }
 
+/* Div contenant toutes les div de la liste ( checkbox - lignes - boutons ) */
+
 #boxes {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    margin: 0 300px;
-    margin-top: 20px;
+    margin        : 0 300px;
+    margin-top    : 100px;
 }
+
+/* Checkbox : */
 
 #check {
     height: 25px;
-    width: 25px;
-    margin: 30px;
-    padding: 30px;
+    width : 25px;
+}
+
+/* Div pour aligner la checkbox + la ligne <p> + les boutons modifier: */
+
+.boxesButton {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    margin         : 10px 0;
+}
+
+/*Lignes du milieu en attendant de trouver mieux (dans balise <p>)*/
+
+.boxesButton p {
+    margin: 0;
+
+}
+
+/* boutons Mofifier avec dropDown : */
+.btn-group button {}
+
+/* Dropdown des boutons Modifier : */
+
+.dropdown-item {
+    text-align      : center;
+    background-color: #F29AA0;
+    font-weight     : bold;
 }
