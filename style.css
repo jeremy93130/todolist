@@ -84,7 +84,17 @@ h1 {
 }
 
 /* boutons Mofifier avec dropDown : */
-.btn-group button {}
+.btn-group button {
+    background-color: #F29AA0;
+    border-radius   : 13px;
+    padding: 5px 25px;
+}
+
+/* "marge" du menu dropdown */
+
+.dropdown-menu {
+    background-color: black;
+}
 
 /* Dropdown des boutons Modifier : */
 
