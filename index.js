@@ -1,9 +1,16 @@
+var buttons = document.getElementsByClassName("modif")
+var paragraph = document.getElementsByClassName("paragraph")
+
 function onTaskSubmit(str) {
-    console.log(str)
+    paragraph = document.innerhtml(" ")
 }
 
 onTaskSubmit("bonjour")
 
-function myDropDown() {
-    document.getElementById
+function modified(str) {
+    
+    paragraph.innerhtml =" "
 }
+
+modified()
+

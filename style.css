@@ -5,7 +5,7 @@
 /* taille des nuages */
 
 header img {
-    width: 200px;
+    width : 200px;
     margin: 0 30px;
 }
 
@@ -50,7 +50,15 @@ h1 {
     font-size     : 50px;
     word-spacing  : 10px;
     letter-spacing: 5px;
+    margin-top    : 10px;
 
+}
+
+/* div de Header que j'alligne au centre*/
+
+header div {
+    display: flex;
+    align-items: center;
 }
 
 /* Div contenant toutes les div de la liste ( checkbox - lignes - boutons ) */
@@ -103,19 +111,19 @@ h1 {
 }
 
 /* Boutons poubelle supprimer tâche */
-.delete{
+.delete {
     background-color: #FEF6F4;
-    border: none;
+    border          : none;
 }
 
 #joy {
-    height: 200px;
+    height  : 200px;
     position: absolute;
-    bottom: 20px;
-    right: 30px;
+    bottom  : 20px;
+    right   : 30px;
 }
 
-.joy{
-    display: flex;
+.joy {
+    display        : flex;
     justify-content: flex-end;
 }
