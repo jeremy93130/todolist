@@ -3,3 +3,7 @@ function onTaskSubmit(str) {
 }
 
 onTaskSubmit("bonjour")
+
+function myDropDown() {
+    document.getElementById
+}

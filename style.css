@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fleur+De+Leah&display=swap');
 
+header img {
+    height: 100px;
+    margin: 0 30px;
+}
+
+#smily {
+    position: relative;
+    bottom: 10px;
+}
+
+#sleep {
+    position: relative;
+    top: 50px;
+}
+
 body {
     background-color: #F29AA0;
 }
@@ -11,11 +26,30 @@ body {
 
 section {
     border: 2px solid palevioletred;
-    height: 600px;
-    margin: 0 400px;
+    width: 1500px;
+    height: 750px;
+    background-color: #FEF6F4;
 }
 
 h1 {
     font-family: 'Fleur De Leah', cursive;
+    font-weight: bold;
+    font-size: 50px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
 
+}
+
+#boxes {
+    display: flex;
+    flex-direction: column;
+    margin: 0 300px;
+    margin-top: 20px;
+}
+
+#check {
+    height: 25px;
+    width: 25px;
+    margin: 30px;
+    padding: 30px;
 }
