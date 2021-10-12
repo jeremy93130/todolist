@@ -74,7 +74,7 @@ h1 {
 .boxesButton {
     display        : flex;
     align-items    : center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin         : 10px 0;
 }
 
@@ -106,4 +106,16 @@ h1 {
 .delete{
     background-color: #FEF6F4;
     border: none;
+}
+
+#joy {
+    height: 200px;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+.joy{
+    display: flex;
+    justify-content: flex-end;
 }
