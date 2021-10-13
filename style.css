@@ -56,8 +56,31 @@ h1 {
 
 /* Boutons pour filtrer les tâches */
 .filters {
-    display: flex;
+    border         : 1px solid black;
+    display        : flex;
+    justify-content: center;
+    margin-top     : 70px;
+    gap            : 50px;
 
+}
+
+/* boutons filter*/
+
+.filter {
+    width        : 95px;
+    border-radius: 30px;
+}
+
+.todo {
+    background-color: #F3C6AF;
+}
+
+.doing {
+    background-color: #EDA480;
+}
+
+.done {
+    background-color: #B57454;
 }
 
 /* div de Header que j'alligne au centre*/
@@ -148,12 +171,12 @@ header div {
     }
 
     #boxes {
-        margin: 0;
+        margin         : 0;
         justify-content: center;
     }
 
     #joy {
-        bottom : -50px;
+        bottom: -50px;
     }
 
 
