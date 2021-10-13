@@ -190,6 +190,7 @@ form {
     font-size       : 12px;
 }
 
+/* Boutons du formulaires */
 .btn-add-task{
     width           : 320px;
     display         : flex;
@@ -199,7 +200,7 @@ form {
     justify-content : center;
     align-items     : center;
 }
-
+/* Bouton ajouter une tâche et random */
 #task-btn, #random-btn{
     background-color: #C2C2C2;
     color           : white;
@@ -208,12 +209,11 @@ form {
     height: 25px;
 
 }
-
-/* Bouton Random */
-
+/* Bouton tâche aléatoire */
 #random-btn {
     background-color: palevioletred;
 }
+
 
 /* nuage du bas */
 #joy {
