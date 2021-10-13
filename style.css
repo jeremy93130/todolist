@@ -78,15 +78,15 @@ h1 {
     border       : 2px solid #fff;
 }
 
-.filters .todo {
+.filters .todo, .status.todo {
     background-color: #F3C6AF;
 }
 
-.filters .doing {
+.filters .doing, .status.doing {
     background-color: #EDA480;
 }
 
-.filters .done {
+.filters .done, .status.done {
     background-color: #B57454;
 }
 
@@ -240,6 +240,11 @@ form {
     display         : flex;
     align-items     : center;
     background-color: #F3C6AF;
+}
+
+.value {
+    width: 60%;
+    display: flex;
 }
 
 
