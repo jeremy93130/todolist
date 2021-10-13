@@ -1,9 +1,27 @@
-function onTaskSubmit(str) {
-    console.log(str)
+var buttons = document.getElementsByClassName("modif")
+var paragraph = document.getElementsByClassName("paragraph")
+var del = document.getElementsByClassName("delete")
+var reinit
+
+function onTaskSubmit() {
+    paragraph.innerhtml = " "
 }
 
-onTaskSubmit("bonjour")
+onTaskSubmit()
 
-function myDropDown() {
-    document.getElementById
+function modified(str) {
+    
+    paragraph.innerhtml =" "
 }
+
+modified()
+
+function garbage() {
+
+    if(onclick) {
+        paragraph.innerhtml = " "
+    }
+
+}
+
+garbage()
