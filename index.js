@@ -1,28 +1,10 @@
-var randomWord = require("random-word-fr")
-
-
+const randomWordFr = require("random-word-fr")
 
 
 var buttons = document.getElementsByClassName("modif")
 var del = document.getElementsByClassName("delete")
 var boxes = document.getElementById("boxes")
 var reinit = document.getElementById("writing")
-
-
-function modified(str) {
-
-    paragraph.innerhtml = " "
-}
-
-
-
-function garbage() {
-
-
-
-}
-
-
 
 
 // Explications de Benoit sur l'envoie de tâches dans le tableau
@@ -67,30 +49,11 @@ function onTaskSubmit() {
 </div>`
 
     })
-    inputValue = ""
 }
 
-function garbage() {
-    var deleteTask = document.getElementsByClassName("delete")
-    var justi = document.getElementsByClassName("justify")
-
-    justi.innerHTML = " "
-
-    tasks.forEach(function (task) {
-
+function random() {
+    var mysteryWord = randomWordFr
+    tasks.forEach(function () {
+        
     })
-}
-
-function edit(index) {
-    var doing = tasks[index].status = "doing"
-    var toDo = tasks[index].status = "To do"
-    var done = tasks[index].status = "Done"
-
-    inputValue.forEach(function (index) {
-
-    })
-
-
-
-    onTaskSubmit()
 }
