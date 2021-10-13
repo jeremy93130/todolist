@@ -1,7 +1,13 @@
+var randomWord = require("random-word-fr")
+
+
+
+
 var buttons = document.getElementsByClassName("modif")
 var del = document.getElementsByClassName("delete")
 var boxes = document.getElementById("boxes")
 var reinit = document.getElementById("writing")
+
 
 function modified(str) {
 
@@ -21,7 +27,7 @@ function garbage() {
 
 // Explications de Benoit sur l'envoie de tâches dans le tableau
 
-var boxes = document.getElementById("boxes")
+
 
 var tasks = []
 
@@ -42,6 +48,7 @@ function onTaskSubmit() {
         ${task.value}
      <div>
         <div class="btn-group">
+            <button type="button" onclick="random()" class="random btn">Random</button>
             <button type="button" onclick="modified()" class="btn text-white modif">Modifier</button>
             <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -79,8 +86,8 @@ function edit(index) {
     var toDo = tasks[index].status = "To do"
     var done = tasks[index].status = "Done"
 
-    inputValue.forEach(function(index) {
-        
+    inputValue.forEach(function (index) {
+
     })
 
 
