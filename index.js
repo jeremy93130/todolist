@@ -17,10 +17,8 @@ function modified(str) {
 modified()
 
 function garbage() {
-
-    if(onclick) {
-        paragraph.innerhtml = " "
-    }
+    document.getElementsByClassName("delete")
+    
 
 }
 

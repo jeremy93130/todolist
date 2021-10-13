@@ -55,15 +55,15 @@ h1 {
 }
 
 /* Boutons pour filtrer les tâches */
-.filters{
+.filters {
     display: flex;
 
 }
-   
+
 /* div de Header que j'alligne au centre*/
 
 header div {
-    display: flex;
+    display    : flex;
     align-items: center;
 }
 
@@ -96,7 +96,7 @@ header div {
 
 .boxesButton p {
     margin: 0;
-    color: #C4C4C4;
+    color : #C4C4C4;
 
 }
 
@@ -105,7 +105,7 @@ header div {
     background-color: #F29AA0;
 }
 
-.btn{
+.btn {
     border: 1px solid white;
 }
 
@@ -129,6 +129,7 @@ header div {
     border          : none;
 }
 
+/* nuage du bas */
 #joy {
     height  : 200px;
     position: absolute;
@@ -139,4 +140,21 @@ header div {
 .joy {
     display        : flex;
     justify-content: flex-end;
+}
+
+@media screen and (min-width : 400px) and (max-width : 1327px) {
+    .boxesButton {
+        display: flex;
+    }
+
+    #boxes {
+        margin: 0;
+        justify-content: center;
+    }
+
+    #joy {
+        bottom : -50px;
+    }
+
+
 }
