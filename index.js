@@ -62,3 +62,28 @@ function onTaskSubmit() {
     })
     inputValue = ""
 }
+
+function garbage() {
+    var deleteTask = document.getElementsByClassName("delete")
+    var justi = document.getElementsByClassName("justify")
+
+    justi.innerHTML = " "
+
+    tasks.forEach(function (task) {
+
+    })
+}
+
+function edit(index) {
+    var doing = tasks[index].status = "doing"
+    var toDo = tasks[index].status = "To do"
+    var done = tasks[index].status = "Done"
+
+    inputValue.forEach(function(index) {
+        
+    })
+
+
+
+    onTaskSubmit()
+}
