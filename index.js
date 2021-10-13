@@ -1,20 +1,10 @@
-var randomWord = require("random-word-fr")
-
-
 
 
 var buttons = document.getElementsByClassName("modif")
 var del = document.getElementsByClassName("delete")
 var boxes = document.getElementById("boxes")
 var reinit = document.getElementById("writing")
-var deleteTask = document.getElementsByClassName("delete")
-
-
-
-function modified(str) {
-
-    paragraph.innerhtml = " "
-}
+// var deleteTask = document.getElementsByClassName("delete")
 
 
 // Explications de Benoit sur l'envoie de tâches dans le tableau
@@ -74,4 +64,3 @@ function remove(index) {
     displayBoxes()
 }
 
-// Fonction pour modifier une tâche
