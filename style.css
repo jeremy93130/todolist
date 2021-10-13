@@ -25,6 +25,7 @@ header img {
 
 body {
     background-color: palevioletred;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* class flex pour éviter de s'embêter */
@@ -166,26 +167,28 @@ form{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: center;
     align-items: center;
 }
 
 .sendList{
     width: 300px;
     border: none;
-    border-bottom: dashed #C2C2C2;
+    border-bottom: 1px dashed #C2C2C2;
     background-color: #FEF6F4;
     text-align: center;
+    font-style: italic;
+    font-size: 12px;
 }
 
 #task-btn{
-    width: 200px;
+    width: 150px;
     border-radius: 30px;
     background-color: #C2C2C2;
     color: white;
     border: none;
     display: flex;
     justify-content: center;
+    font-size: 12px;
     
 }
 
