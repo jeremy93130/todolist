@@ -24,16 +24,16 @@
 
         <div class="filters">
                 <div class="filter todo">
-                    <input id="todo" type="checkbox" checked>
-                    <label for="todo"> To Do</label>
+                    <input id="todo" type="checkbox">
+                    <label class="label-filter todo" for="todo"> To Do</label>
                 </div>
                 <div class="filter doing">
                     <input id="doing" type="checkbox" name="Doing">
-                    <label for="doing">Doing</label>
+                    <label class="label-filter doing" for="doing">Doing</label>
                 </div>
                 <div class="filter done">
                     <input id="done" type="checkbox" name="Done">
-                    <label for="done">Done</label>
+                    <label class="label-filter done" for="done">Done</label>
                 </div>
         </div>​
 
@@ -183,10 +183,11 @@
             <div class="joy">
                 <img id="joy" class="cloud" src="img/nuages-pêche4.png" alt="Petit nuage trop choupinou" />
             </div>
+
             <div class="flex bottom">
                 <form onsubmit="onTaskSubmit(); return false" ;>
-                    <input type="text" class="sendList" placeholder="Ecrire choses à faire ici">
-                    <button type="submit"></button>
+                    <input type="text" class="sendList" placeholder="Ecrire une tâche à faire">
+                    <button id="task-btn" type="submit">Ajouter une tâche</button>
                 </form>
             </div>
 

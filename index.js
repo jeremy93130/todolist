@@ -23,3 +23,25 @@ function garbage() {
 }
 
 garbage()
+
+
+// Explications de Benoit sur l'envoie de tâches dans le tableau
+
+var list = document.getElementById("boxes")
+
+var task = []
+
+function onTaskSubmit (){
+    var inputValue = document.getElementById("input").value 
+    var task = {value: inputValue, status: "to do"}
+    tasks.push(task)
+
+    console.log(tasks)
+    debbuger
+
+    list.innerHTML = ""
+
+    tasks.forEach(function(task) {
+        list.innerHTML += list.innerHTML
+    })
+}
