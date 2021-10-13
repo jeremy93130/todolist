@@ -24,7 +24,7 @@ header img {
 }
 
 body {
-    background-color: #F29AA0;
+    background-color: palevioletred;
 }
 
 /* class flex pour éviter de s'embêter */
@@ -160,6 +160,34 @@ header div {
     border          : none;
 }
 
+/* Ajouter une nouvelle tâche */
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sendList{
+    width: 300px;
+    border: none;
+    border-bottom: dashed #C2C2C2;
+    background-color: #FEF6F4;
+    text-align: center;
+}
+
+#task-btn{
+    width: 200px;
+    border-radius: 30px;
+    background-color: #C2C2C2;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
 /* nuage du bas */
 #joy {
     height  : 200px;
@@ -173,6 +201,8 @@ header div {
     justify-content: flex-end;
 }
 
+
+/* ------ MEDIAS QUERIES ------- */
 
 
 @media screen and (min-width: 1200px) {
