@@ -1,8 +1,14 @@
+var randomWord = require("random-word-fr")
+
+
+
+
 var buttons = document.getElementsByClassName("modif")
 var del = document.getElementsByClassName("delete")
 var boxes = document.getElementById("boxes")
 var reinit = document.getElementById("writing")
 var deleteTask = document.getElementsByClassName("delete")
+
 
 
 function modified(str) {
@@ -13,7 +19,7 @@ function modified(str) {
 
 // Explications de Benoit sur l'envoie de tâches dans le tableau
 
-var boxes = document.getElementById("boxes")
+
 
 var tasks = []
 
@@ -41,6 +47,7 @@ function displayBoxes() {
         ${task.value}
     <div>
         <div class="btn-group">
+            <button type="button" onclick="random(${index})" class="random btn">Random</button>
             <button type="button" onclick="modified(${index})" class="btn text-white modif">Modifier</button>
             <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -66,3 +73,5 @@ function remove(index) {
     tasks.splice(index, 1)
     displayBoxes()
 }
+
+// Fonction pour modifier une tâche
