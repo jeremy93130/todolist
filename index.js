@@ -10,14 +10,6 @@ function modified(str) {
 
 
 
-function garbage() {
-
-
-
-}
-
-garbage()
-
 
 // Explications de Benoit sur l'envoie de tâches dans le tableau
 
@@ -57,5 +49,9 @@ function onTaskSubmit() {
     </div>
         
 </div>`
+
     })
 }
+
+
+
