@@ -20,6 +20,7 @@ function onTaskSubmit() {
 
     inputValue = ""
 }
+
 /**
  * Definit le nouveau status de la tâche sélectionnée
  * @param {integer} index - L'index de la task 
@@ -71,8 +72,8 @@ function addTask(task, index) {
 // Fonction pour supprimer une tâche
 function remove(index) {
     tasks.splice(index, 1)
-    
 }
+
 
 // Fonction pour modifier une tâche
 
