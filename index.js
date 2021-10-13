@@ -1,24 +1,18 @@
 var buttons = document.getElementsByClassName("modif")
-var paragraph = document.getElementsByClassName("paragraph")
 var del = document.getElementsByClassName("delete")
+var boxes = document.getElementById("boxes")
 var reinit
 
-function onTaskSubmit() {
+function modified(str) {
+
     paragraph.innerhtml = " "
 }
 
-onTaskSubmit()
 
-function modified(str) {
-    
-    paragraph.innerhtml =" "
-}
-
-modified()
 
 function garbage() {
-    document.getElementsByClassName("delete")
-    
+
+
 
 }
 
@@ -31,17 +25,17 @@ var list = document.getElementById("boxes")
 
 var task = []
 
-function onTaskSubmit (){
-    var inputValue = document.getElementById("input").value 
-    var task = {value: inputValue, status: "to do"}
+function onTaskSubmit(tasks) {
+    var inputValue = document.getElementById("newTask").value
+    tasks = { value: inputValue, status: "to do" }
     tasks.push(task)
 
-    console.log(tasks)
+    console.log(task)
     debbuger
 
-    list.innerHTML = ""
 
-    tasks.forEach(function(task) {
+
+    task.forEach(function (task) {
         list.innerHTML += list.innerHTML
     })
 }
