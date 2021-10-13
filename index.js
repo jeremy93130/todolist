@@ -29,6 +29,7 @@ function onTaskSubmit() {
     tasks.push(task)
     inputValue.value = ""
 }
+
 /**
  * Definit le nouveau status de la tâche sélectionnée
  * @param {number} index - L'index de la task 
