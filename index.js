@@ -37,7 +37,7 @@ function onTaskSubmit() {
         boxes.innerHTML += `
    
 <div class="justify">
-        <span>${task.status}</span>
+        <span class="status">${task.status}</span>
         ${task.value}
      <div>
         <div class="btn-group">
