@@ -52,6 +52,11 @@ h1 {
 
 }
 
+/* Boutons pour filtrer les tâches */
+.filters{
+    display: flex;
+}
+
 /* Div contenant toutes les div de la liste ( checkbox - lignes - boutons ) */
 
 #boxes {
@@ -81,6 +86,7 @@ h1 {
 
 .boxesButton p {
     margin: 0;
+    color: #C4C4C4;
 
 }
 
@@ -89,6 +95,10 @@ h1 {
     background-color: #F29AA0;
     border-radius   : 13px;
     padding: 5px 25px;
+}
+
+.btn{
+    border: 1px solid white;
 }
 
 /* "marge" du menu dropdown */
