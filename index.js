@@ -1,7 +1,7 @@
 var buttons = document.getElementsByClassName("modif")
 var del = document.getElementsByClassName("delete")
 var boxes = document.getElementById("boxes")
-var reinit
+var reinit = document.getElementById("writing")
 
 function modified(str) {
 
@@ -16,7 +16,7 @@ function garbage() {
 
 }
 
-garbage()
+
 
 
 // Explications de Benoit sur l'envoie de tâches dans le tableau
@@ -28,6 +28,7 @@ var tasks = []
 function onTaskSubmit() {
     var inputValue = document.getElementById("newTask").value
     var task = { value: inputValue, status: "to do" }
+
     tasks.push(task)
 
 
@@ -57,5 +58,7 @@ function onTaskSubmit() {
     </div>
         
 </div>`
+
     })
+    inputValue = ""
 }
