@@ -11,19 +11,23 @@ var reinit = document.getElementById("writing")
 
 
 // Explications de Benoit sur l'envoi de tâches dans le tableau
-
+/**
+ * Tableau contenant les tâches.
+ * @global
+ * @var {Array[Object]}
+ */
 var tasks = []
 
+/**
+ * Ajoute la tâche lorsqu'on appuie sur entrée.
+ */
 function onTaskSubmit() {
-    var inputValue = document.getElementById("newTask").value
-    var task = { value: inputValue, status: "to do" }
+    var inputValue = document.getElementById("newTask")
+    /* on récupère la valeur de notre champ de saisie*/
+    var task = { value: (inputValue.value + ""), status: "to do" }
     addTask(task, tasks.length)
     tasks.push(task)
-
-
-
-
-    inputValue = ""
+    inputValue.value = ""
 }
 /**
  * Definit le nouveau status de la tâche sélectionnée
@@ -32,11 +36,21 @@ function onTaskSubmit() {
  * @param {string} className - le nom de la class correspondante (voir)
  */
 function selectStatus(index, element, className) {
+    /**
+     * Tâche dont on modifie le statut
+     * @var {Object}
+     */
     var task = tasks[index]
+    /* On met à jour le statut de la tâche en récupérant le texte contenu dans l'élément HTML sur lequel j'ai cliqué. */
     task.status = element.innerText
+    /**
+     * L'élement HTML correspondant au statut que je veux modifier (l'index)
+     * @var {HTMLElement}
+     */
     var span = document.getElementById(`status[${index}]`) // Va chercher dans le dom l'élément de l'id 
     span.innerHTML = task.status
-    span.className = "status " + className //Changement de l'attribut class de l'élément span (changement couleur todo , doing , done) (voir ligne 43)
+    /*Changement de l'attribut class de l'élément span (changement couleur todo , doing , done) (voir ligne 43)*/
+    span.className = "status " + className
     selectStatus()
 
 }
@@ -77,22 +91,24 @@ function addTask(task, index) {
     )
 }
 
-// Fonction pour supprimer une tâche
+/**
+ * Suppression de la tâche située à l'index donné.
+ * @param {number} index 
+ */
 function remove(index) {
     tasks[index] = null // Remplace l'élément à l'index par null (rien du tout) , permet d'éviter de déplacer tous les autres index.
-    document.getElementById(`task[${index}]`).remove()
+    document.getElementById(`task[${index}]`).remove() // Supprime l'élément HTML qui contient la tâche
 
 }
 
 
-// Fonction bouton random : 
-
+/**
+ * Génération d'une tâche aléatoire
+ */
 function randomButton() {
     var randomWords = ["Promener Kiwi", "Laver Mamie", "Renverser papy", "Reveiller son cerveau", "Recharger son téléphone", "Demander des grossièretées en italien à Salwa", "Organiser un combat de Sumo", "Visiter Fleury-Mérogis", "Faire chier Benoît toutes les 5 minutes", "Manger du pudding", "Faire un barbecu à l'eau"]
-    var maths = Math.floor(Math.random() * (randomWords.length)); 
-
-    var task = { value: randomWords[maths], status: "To Do" }
-
+    var task = { value: randomWords[Math.floor(Math.random() * randomWords.length)], status: "To Do" }
+/* On ajoute la tâche avec son index (tasks.length) */
     addTask(task, tasks.length)
     tasks.push(task)
 }
