@@ -227,12 +227,12 @@ header div {
     height  : 200px;
     position: relative;
     bottom  : 20px;
-    left  : 450px;
+    right   : 50px;
 }
 
 .joy {
     display        : flex;
-    justify-self: flex-end;
+    justify-content: flex-end;
 }
 
 
