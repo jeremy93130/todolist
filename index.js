@@ -1,4 +1,4 @@
-var buttons = document.getElementsByClassName("modif")
+var button = document.getElementsByClassName("modif")
 var del = document.getElementsByClassName("delete")
 /**
  * Element conteneur de toutes les tâches 
@@ -24,7 +24,7 @@ var tasks = []
 function onTaskSubmit() {
     var inputValue = document.getElementById("newTask")
     /* on récupère la valeur de notre champ de saisie*/
-    var task = { value: (inputValue.value + ""), status: "to do" }
+    var task = { value: (inputValue.value + ""), status: "To Do" }
     addTask(task, tasks.length)
     tasks.push(task)
     inputValue.value = ""
@@ -73,9 +73,9 @@ function addTask(task, index) {
         ` <div id="task[${index}]" class="justify">
         <span class="status todo" id="status[${index}]">${task.status}</span> 
         <span class="value">${task.value}</span>
-    <div>
+    <div class="sideToSide">
         <div class="btn-group">
-            <button type="button" class="btn text-white modif">Modifier</button>
+            <button type="button" class="btn text-white modif" onclick="edit(${index})" >Modifier</button>
             <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Toggle Dropdown</span>
@@ -109,13 +109,17 @@ function remove(index) {
  * Génération d'une tâche aléatoire
  */
 function randomButton() {
-    var randomWords = ["Promener Kiwi", "Laver Mamie", "Renverser papy", "Reveiller son cerveau", "Recharger son téléphone", "Demander des grossièretés en italien à Salwa", "Organiser un combat de Sumo", "Visiter Fleury-Mérogis", "Faire chier Benoît toutes les 5 minutes", "Manger du pudding", "Faire un barbecu à l'eau"]
+    var randomWords = ["Promener Kiwi", "Laver Mamie", "Renverser papy", "Reveiller son cerveau", "Recharger son téléphone", "Demander des grossièretés en italien à Salwa", "Organiser un combat de Sumo", "Visiter Fleury-Mérogis", "Faire chier Benoît toutes les 5 minutes", "Manger du pudding", "Faire un barbecue à l'eau"]
     var task = { value: randomWords[Math.floor(Math.random() * randomWords.length)], status: "To Do" }
-/* On ajoute la tâche avec son index (tasks.length) */
+    /* On ajoute la tâche avec son index (tasks.length) */
     addTask(task, tasks.length)
     tasks.push(task)
 }
 
-function edit() {
+// function edit(index, element, task) {
+//     var edited = document.getElementsByClassName("value")
 
-}
+//     edited.map(function (taskEdited) {
+
+//     })
+// }

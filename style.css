@@ -295,3 +295,34 @@ form {
     }
 
 }
+
+@media screen and (max-width: 500px) {
+
+
+    header {
+        justify-content: center;
+    }
+
+    .cloud {
+        height: 50px;
+        width: 50px;
+    }
+
+    #sleep {
+        top: 0px;
+    }
+
+    #joy {
+        height: 40px;
+    }
+
+    div h1 {
+        display: flex;
+        font-size: 26px;
+    }
+
+    .sideToSide {
+        display: flex;
+    }
+    
+}
