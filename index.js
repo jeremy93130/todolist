@@ -72,10 +72,10 @@ function addTask(task, index) {
 
         ` <div id="task[${index}]" class="justify">
         <span class="status todo" id="status[${index}]">${task.status}</span> 
-        <span class="value">${task.value}</span>
+        <span id="edit-${index}" class="value">${task.value}</span>
     <div class="sideToSide">
         <div class="btn-group">
-            <button type="button" class="btn text-white modif" onclick="edit(${index})" >Modifier</button>
+            <button type="button" class="btn text-white modif" onclick="addForm(${index})">Modifier</button>
             <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Toggle Dropdown</span>
@@ -116,10 +116,38 @@ function randomButton() {
     tasks.push(task)
 }
 
-// function edit(index, element, task) {
-//     var edited = document.getElementsByClassName("value")
+// Cette fonction permet d'afficher le formulaire 
 
-//     edited.map(function (taskEdited) {
+function addForm(index) {
+    // on récupere l'element où on va rajouter notre formulaire
+    var edited = document.getElementById(`edit-${index}`)
+    console.log(edited)
 
-//     })
-// }
+    // Ajout du formulaire à l'element 
+    edited.innerHTML = `
+        <form onsubmit="edit(${index}); return false;" >
+            <input type="text" id="taskEdited" class="sendList" placeholder="">
+            <button id="edit-btn" type="submit">Valider</button>
+        </form>
+    `
+
+}
+
+// Cette fonction est appellée dans le formulaire pour modifier l'Objet 
+
+function edit(index) {
+    // on récupere la valeur de l'input 
+    var edited = document.getElementById("taskEdited").value
+    
+    // On change la valeur de l'Objet qui est dans le tableau task avec la nouvelle valeur (ligne au dessus)
+    tasks[index].value = edited
+    
+    // On récupere l'élément où l'on veut réafficher
+    var elementHTML = document.getElementById(`edit-${index}`)
+
+    // Je supprime tout ce qui était dedans et initialise une nouvelle string vide 
+    elementHTML.innerHTML =  "";
+
+    // A la place de string vide je mets la nouvelle valeur ( la value de l'Objet modifié )
+    elementHTML.innerHTML =  tasks[index].value;
+}
