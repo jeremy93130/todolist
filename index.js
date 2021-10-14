@@ -107,9 +107,13 @@ function remove(index) {
  * Génération d'une tâche aléatoire
  */
 function randomButton() {
-    var randomWords = ["Promener Kiwi", "Laver Mamie", "Renverser papy", "Reveiller son cerveau", "Recharger son téléphone", "Demander des grossièretées en italien à Salwa", "Organiser un combat de Sumo", "Visiter Fleury-Mérogis", "Faire chier Benoît toutes les 5 minutes", "Manger du pudding", "Faire un barbecu à l'eau"]
+    var randomWords = ["Promener Kiwi", "Laver Mamie", "Renverser papy", "Reveiller son cerveau", "Recharger son téléphone", "Demander des grossièretés en italien à Salwa", "Organiser un combat de Sumo", "Visiter Fleury-Mérogis", "Faire chier Benoît toutes les 5 minutes", "Manger du pudding", "Faire un barbecu à l'eau"]
     var task = { value: randomWords[Math.floor(Math.random() * randomWords.length)], status: "To Do" }
 /* On ajoute la tâche avec son index (tasks.length) */
     addTask(task, tasks.length)
     tasks.push(task)
+}
+
+function edit() {
+    
 }
