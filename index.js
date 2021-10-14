@@ -10,11 +10,7 @@ var reinit = document.getElementById("writing")
 
 
 // Explications de Benoit sur l'envoi de tâches dans le tableau
-/**
- * Tableau contenant les tâches.
- * @global
- * @var {Array[Object]}
- */
+
 var tasks = []
 
 /**
@@ -29,40 +25,37 @@ function onTaskSubmit() {
     inputValue.value = ""
 }
 
-/**
- * Definit le nouveau status de la tâche sélectionnée
- * @param {number} index - L'index de la task 
- * @param {HTMLElement} element - L'élément HTML sur lequel j'ai cliqué (to do, doing , done)
- * @param {string} className - le nom de la class correspondante.
- */
+// Definit le nouveau status de la tâche sélectionnée
+
 function selectStatus(index, element, className) {
     /**
      * Tâche dont on modifie le statut
      * @var {Object}
      */
+
     var task = tasks[index]
+
     /* On met à jour le statut de la tâche en récupérant le texte contenu dans l'élément HTML sur lequel j'ai cliqué. */
+
     task.status = element.innerText
+
     /**
      * L'élement HTML correspondant au statut que je veux modifier (l'index)
      * @var {HTMLElement}
      */
+
     var span = document.getElementById(`status[${index}]`) // Va chercher dans le dom l'élément de l'id 
     span.innerHTML = task.status
+
     /*Changement de l'attribut class de l'élément span (changement couleur todo , doing , done) */
+
     span.className = "status " + className
     selectStatus()
 
 }
 
-// Ligne 56 : Création d'une span de class 'status todo' 
-// Ligne 47 : Donne un nom à la div conteneuse
+// Ajout d'une nouvelle tâche
 
-/**
- * Ajout d'une nouvelle tâche
- * @param {Object} task - Tâche à ajouter
- * @param {int} index - L'index de la tâche dans le tableau [tasks]
- */
 function addTask(task, index) {
     /*Ajout du code HTML de la tâche en fin de conteneur contrairement à .innerHTML qui remplace tout le code html*/
     /* onclick="selectstatus(index,this,todo) = Le onclick appelle la fonction SelectStatus , this correspond au dropdown qui porte son nom (dropDown Todo = statut de la tâche Todo) 
@@ -93,10 +86,8 @@ function addTask(task, index) {
     )
 }
 
-/**
- * Suppression de la tâche située à l'index donné.
- * @param {number} index 
- */
+// Suppression de la tâche située à l'index donné.
+
 function remove(index) {
     tasks[index] = null // Remplace l'élément à l'index par null (rien du tout) , permet d'éviter de déplacer tous les autres index.
     document.getElementById(`task[${index}]`).remove() // Supprime l'élément HTML qui contient la tâche
@@ -140,18 +131,18 @@ function addForm(index) {
 function edit(index) {
     // on récupere la valeur de l'input 
     var edited = document.getElementById("taskEdited").value
-    
+
     // On change la valeur de l'Objet qui est dans le tableau task avec la nouvelle valeur (ligne au dessus)
     tasks[index].value = edited
-    
+
     // On récupere l'élément où l'on veut réafficher
     var elementHTML = document.getElementById(`edit-${index}`)
 
     // Je supprime tout ce qui était dedans et initialise une nouvelle string vide 
-    elementHTML.innerHTML =  "";
+    elementHTML.innerHTML = "";
 
     // A la place de string vide je mets la nouvelle valeur ( la value de l'Objet modifié )
-    elementHTML.innerHTML =  tasks[index].value;
+    elementHTML.innerHTML = tasks[index].value;
 }
 
 
@@ -159,11 +150,19 @@ function edit(index) {
  * Filtrer les status des tâches (to do, doing, done)
  */
 
-function filterStatus (value){
+function filterStatus(param1, param2, param3) {
     // console.log("hello")
-    var arrayFiltered = tasks.filter(function(task){
-        return value === task.status;
+    var arrayFiltered = tasks.filter(function (task) {
+        if (param1 === toDo.value) {
+            doing = doing.style.display = 'none';
+        }
     })
     console.log(tasks)
     selectStatus(arrayFiltered)
+
+    var toDo = document.getElementById("todo")
+    var doing = document.getElementById("doing")
+    var done = document.getElementById("done")
+
+
 }
