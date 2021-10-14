@@ -154,3 +154,17 @@ function edit(index) {
     // A la place de string vide je mets la nouvelle valeur ( la value de l'Objet modifié )
     elementHTML.innerHTML =  tasks[index].value;
 }
+
+
+/**
+ * Filtrer les status des tâches (to do, doing, done)
+ */
+
+function filterStatus (value){
+    // console.log("hello")
+    var arrayFiltered = tasks.filter(function(task){
+        return value === task.status;
+    })
+    console.log(tasks)
+    selectStatus(arrayFiltered)
+}
