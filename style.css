@@ -45,7 +45,8 @@ section {
 /* h1 forcément ... */
 
 h1 {
-    font-family   : 'Fleur De Leah', cursive;
+    /* font-family   : 'Fleur De Leah', cursive; */
+    font-family: 'Cookie', cursive;
     font-weight   : bold;
     font-size     : 50px;
     word-spacing  : 10px;
@@ -226,12 +227,12 @@ header div {
     height  : 200px;
     position: relative;
     bottom  : 20px;
-    right   : 30px;
+    left  : 450px;
 }
 
 .joy {
     display        : flex;
-    justify-content: flex-end;
+    justify-self: flex-end;
 }
 
 
