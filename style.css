@@ -174,7 +174,7 @@ header div {
 
 /* Ajouter une nouvelle tâche */
 
-form {
+#writing {
     display       : flex;
     flex-direction: column;
     gap           : 10px;
@@ -253,6 +253,23 @@ form {
     display: flex;
 }
 
+
+/* Formulaire pour modifier une tâche */
+#edit-form{
+    display: flex;
+    gap: 10px;
+}
+#edit-btn{
+    width: 60px;
+    height: 25px;
+    background-color: #A5C9C9;
+    border: none;
+    border-radius: 30px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-top: 5px;
+}
 
 
 

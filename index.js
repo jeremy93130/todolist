@@ -116,8 +116,12 @@ function randomButton() {
     tasks.push(task)
 }
 
-// Cette fonction permet d'afficher le formulaire 
 
+/**
+ * Modification d'une tâche grâce à un bouton
+ */
+
+//--- Cette fonction permet d'afficher le formulaire 
 function addForm(index) {
     // on récupere l'element où on va rajouter notre formulaire
     var edited = document.getElementById(`edit-${index}`)
@@ -125,16 +129,15 @@ function addForm(index) {
 
     // Ajout du formulaire à l'element 
     edited.innerHTML = `
-        <form onsubmit="edit(${index}); return false;" >
-            <input type="text" id="taskEdited" class="sendList" placeholder="">
+        <form id="edit-form" onsubmit="edit(${index}); return false;" >
+            <input type="text" id="taskEdited" class="sendList" placeholder="Modifier la tâche">
             <button id="edit-btn" type="submit">Valider</button>
         </form>
     `
 
 }
 
-// Cette fonction est appellée dans le formulaire pour modifier l'Objet 
-
+//--- Cette fonction est appellée dans le formulaire pour modifier l'Objet 
 function edit(index) {
     // on récupere la valeur de l'input 
     var edited = document.getElementById("taskEdited").value
