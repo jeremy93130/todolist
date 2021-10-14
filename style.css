@@ -36,11 +36,11 @@ body {
 }
 
 section {
-    border          : 20px solid palevioletred;
-    border-radius   : 30px;
-    width           : 100%;
-    height          : 750px;
-    background-color: #FEF6F4;
+    border             : 20px solid palevioletred;
+    border-radius      : 30px;
+    width              : 100%;
+    /* height          : 750px; */
+    background-color   : #FEF6F4;
 }
 
 /* h1 forcément ... */
@@ -78,15 +78,18 @@ h1 {
     border       : 2px solid #fff;
 }
 
-.filters .todo, .status.todo {
+.filters .todo,
+.status.todo {
     background-color: #F3C6AF;
 }
 
-.filters .doing, .status.doing {
+.filters .doing,
+.status.doing {
     background-color: #EDA480;
 }
 
-.filters .done, .status.done {
+.filters .done,
+.status.done {
     background-color: #B57454;
 }
 
@@ -177,7 +180,8 @@ form {
     flex-direction: column;
     gap           : 10px;
     align-items   : center;
-    margin-top    : 30px;
+    margin        : 30px 0;
+
 }
 
 .sendList {
@@ -191,24 +195,27 @@ form {
 }
 
 /* Boutons du formulaires */
-.btn-add-task{
-    width           : 320px;
-    display         : flex;
-    gap             : 20px;
-    font-size       : 12px;
-    display         : flex;
-    justify-content : center;
-    align-items     : center;
+.btn-add-task {
+    width          : 320px;
+    display        : flex;
+    gap            : 20px;
+    font-size      : 12px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
 }
+
 /* Bouton ajouter une tâche et random */
-#task-btn, #random-btn{
+#task-btn,
+#random-btn {
     background-color: #C2C2C2;
     color           : white;
     border          : none;
     border-radius   : 30px;
-    height: 25px;
+    height          : 25px;
 
 }
+
 /* Bouton tâche aléatoire */
 #random-btn {
     background-color: palevioletred;
@@ -218,7 +225,7 @@ form {
 /* nuage du bas */
 #joy {
     height  : 200px;
-    position: absolute;
+    position: relative;
     bottom  : 20px;
     right   : 30px;
 }
@@ -243,9 +250,11 @@ form {
 }
 
 .value {
-    width: 60%;
+    width  : 60%;
     display: flex;
 }
+
+
 
 
 /* ------ MEDIAS QUERIES ------- */

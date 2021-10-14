@@ -34,7 +34,7 @@ function onTaskSubmit() {
  * Definit le nouveau status de la tâche sélectionnée
  * @param {number} index - L'index de la task 
  * @param {HTMLElement} element - L'élément HTML sur lequel j'ai cliqué (to do, doing , done)
- * @param {string} className - le nom de la class correspondante (voir)
+ * @param {string} className - le nom de la class correspondante.
  */
 function selectStatus(index, element, className) {
     /**
@@ -50,7 +50,7 @@ function selectStatus(index, element, className) {
      */
     var span = document.getElementById(`status[${index}]`) // Va chercher dans le dom l'élément de l'id 
     span.innerHTML = task.status
-    /*Changement de l'attribut class de l'élément span (changement couleur todo , doing , done) (voir ligne 43)*/
+    /*Changement de l'attribut class de l'élément span (changement couleur todo , doing , done) */
     span.className = "status " + className
     selectStatus()
 
@@ -66,6 +66,8 @@ function selectStatus(index, element, className) {
  */
 function addTask(task, index) {
     /*Ajout du code HTML de la tâche en fin de conteneur contrairement à .innerHTML qui remplace tout le code html*/
+    /* onclick="selectstatus(index,this,todo) = Le onclick appelle la fonction SelectStatus , this correspond au dropdown qui porte son nom (dropDown Todo = statut de la tâche Todo) 
+                                                'todo','doing','done' Correspondent au paramètre Classname (le nom de la classe)*/
     boxes.insertAdjacentHTML("beforeend",
 
         ` <div id="task[${index}]" class="justify">
@@ -115,5 +117,5 @@ function randomButton() {
 }
 
 function edit() {
-    
+
 }
