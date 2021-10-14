@@ -1,4 +1,3 @@
-var button = document.getElementsByClassName("modif")
 var del = document.getElementsByClassName("delete")
 /**
  * Element conteneur de toutes les tâches 
@@ -75,7 +74,7 @@ function addTask(task, index) {
         <span id="edit-${index}" class="value">${task.value}</span>
     <div class="sideToSide">
         <div class="btn-group">
-            <button type="button" class="btn text-white modif" onclick="addForm(${index})">Modifier</button>
+            <button type="button" class="btn text-white" onclick="addForm(${index})">Modifier</button>
             <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Toggle Dropdown</span>
