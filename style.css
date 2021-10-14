@@ -45,7 +45,8 @@ section {
 /* h1 forcément ... */
 
 h1 {
-    font-family   : 'Fleur De Leah', cursive;
+    /* font-family   : 'Fleur De Leah', cursive; */
+    font-family: 'Cookie', cursive;
     font-weight   : bold;
     font-size     : 50px;
     word-spacing  : 10px;
@@ -174,7 +175,7 @@ header div {
 
 /* Ajouter une nouvelle tâche */
 
-form {
+#writing {
     display       : flex;
     flex-direction: column;
     gap           : 10px;
@@ -226,7 +227,7 @@ form {
     height  : 200px;
     position: relative;
     bottom  : 20px;
-    right   : 30px;
+    right   : 50px;
 }
 
 .joy {
@@ -253,6 +254,23 @@ form {
     display: flex;
 }
 
+
+/* Formulaire pour modifier une tâche */
+#edit-form{
+    display: flex;
+    gap: 10px;
+}
+#edit-btn{
+    width: 60px;
+    height: 25px;
+    background-color: #A5C9C9;
+    border: none;
+    border-radius: 30px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-top: 5px;
+}
 
 
 
